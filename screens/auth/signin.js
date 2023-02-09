@@ -3,7 +3,7 @@ import { ScrollView, Text, TouchableOpacity, View, ActivityIndicator } from 'rea
 import { styles } from './styles';
 import { LabeledInput } from '../common/components/labeledInput';
 import { useNavigation } from '@react-navigation/native'
-import { SigninUser, FakeSigninForPatient, FakeSigninForHematologist, FakeSigninForHematologistWithIntro, FakeSigninForPatientWithIntro } from './service'
+import { SigninUser } from './service'
 import Toast from 'react-native-toast-message';
 import { ToastConfig } from '../common/common_config/ToastConfig';
 
@@ -65,26 +65,6 @@ const SigninScreen = () => {
             }>
             <Text style={{ color: '#FFF' }}>Sign in</Text>
           </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.submitButton}
-              onPress={() => FakeSigninForPatient(navigation, (val) => setIsLoading(val))} >
-            <Text style={{ color: '#FFF' }}>Fake as Patient</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.submitButton}
-              onPress={() => FakeSigninForHematologist(navigation, (val) => setIsLoading(val))} >
-            <Text style={{ color: '#FFF' }}>Fake as Hematologist</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.submitButton}
-              onPress={() => FakeSigninForPatientWithIntro(navigation, (val) => setIsLoading(val))} >
-            <Text style={{ color: '#FFF' }}>Fake as Patient w/ Intro</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.submitButton}
-              onPress={() => FakeSigninForHematologistWithIntro(navigation, (val) => setIsLoading(val))} >
-              <Text style={{ color: '#FFF' }}>Fake as Hematologist w/ Intro</Text>
-            </TouchableOpacity>
           </View>
           <Toast config={ToastConfig} />
         </View>

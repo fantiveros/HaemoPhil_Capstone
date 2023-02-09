@@ -18,16 +18,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mrpapi.Haemo"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./icons/HaemoPhil_Logo_spalsh.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.mrpapi.Haemo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "de4d04a3-375c-49cc-8651-f3cc796282f3"
+      }
     }
   }
 }

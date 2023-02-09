@@ -8,12 +8,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDTMfh4c7wZgthycMkZR7J0JoXtJ5CQYxg",
-  authDomain: "auth-prod-55cf7.firebaseapp.com",
-  projectId: "auth-prod-55cf7",
-  storageBucket: "auth-prod-55cf7.appspot.com",
-  messagingSenderId: "1082490830783",
-  appId: "1:1082490830783:web:d3842458c8f1d8b2dcab0a"
+  apiKey: "AIzaSyBdfogzxeMaf5JPJLY_lunOMCs70NEXlRQ",
+  authDomain: "hemophil-prod.firebaseapp.com",
+  projectId: "hemophil-prod",
+  storageBucket: "hemophil-prod.appspot.com",
+  messagingSenderId: "451282988767",
+  appId: "1:451282988767:web:ac2a6f345be5e73449036a"
 };
 
 // Initialize Firebase

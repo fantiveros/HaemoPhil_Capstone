@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useCallback } from "react"
-import { Text, View, TouchableOpacity, ScrollView, Image, Linking, Alert } from "react-native"
+import React, { useEffect, useState } from "react"
+import { Text, View, TouchableOpacity, ScrollView, Image } from "react-native"
 import { styles } from "./../styles"
 import { signOut } from "firebase/auth"
 import { authen } from "../../../firebase"
 import { useNavigation } from "@react-navigation/native"
-import { ToastConfig, ShowToast, GetFailedToast } from "../../common/common_config/ToastConfig"
+import { ToastConfig, ShowToast } from "../../common/common_config/ToastConfig"
 import Toast from 'react-native-toast-message';
 import { UserHematologist } from "../../common/constants/user_constants"
 import AwesomeIcon from 'react-native-vector-icons/FontAwesome'
@@ -37,31 +37,6 @@ const AccountScreen = ({user}) => {
       .catch((res) => {
         ShowToast({isCompleted: false, title: "Failed", body: "Something went wrong."})
       })
-  }
-
-  const OpenSurveyButton = ({ url }) => {
-    const handlePress = useCallback(async () => {
-      const supported = await Linking.canOpenURL(url)
-
-      if (supported) {
-        await Linking.openURL(url)
-      } else {
-        Alert.alert("Can't open survey form at the moment.")
-      }
-    }, [url])
-
-    return (
-      <TouchableOpacity
-        onPress={handlePress}
-        style={[
-          styles.mainBtn,
-          { borderRadius: 0, padding: 10, marginTop: 15 },
-        ]}>
-        <Text style={{ color: '#FFF', fontSize: 18, fontWeight: 'bold' }}>
-          SURVEY FORM
-        </Text>
-      </TouchableOpacity>
-    )
   }
 
   return (
@@ -120,14 +95,8 @@ const AccountScreen = ({user}) => {
           onPress={signoutUser}>
           <Text style={{ fontSize: 14, color: "#E15C63" }}>Log out</Text>
         </TouchableOpacity>
-        <View style={{ backgroundColor: '#ffeaeb', borderColor: '#e15c63', marginVertical: 30, padding: 10, borderWidth: 1, alignItems: 'center' }}>
-          <Text style={{flexShrink: 1, textAlign: 'justify', fontSize: 15, fontWeight: '400', color: '#e15c63'}}>{message}</Text>
-          <OpenSurveyButton url={surveyUrl}/> 
-        </View>
         <Toast config={ToastConfig} />
       </View>
     </ScrollView>
   )
 }
-const surveyUrl = "https://docs.google.com/forms/d/e/1FAIpQLSclN2R7R0GVcEqxzl6M54SvqgHX0euXRpWiJuH8nhr0MswCnw/viewform";
-const message = 'Thank you for using HaemoPhil! We would very much appreciate it if you would please take a few minutes of your time and share your experience on the review form below.'

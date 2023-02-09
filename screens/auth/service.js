@@ -239,37 +239,3 @@ const UpdateUserDetail = async({name, contact_number}, user, uid) => {
     return false;
   }
 }
-
-// THIS IS ONLY FOR DEV!!! REMOVE THIS LOGIN LATER AFTER
-export const FakeSigninForPatient = (navigation, onDone) => {
-  const email = "patient1@yahoo.com";
-  const password = "qwerty123";
-  const isSignup = false;
-  const userType = UserPatient;
-  SigninUser(navigation, onDone, {isSignup, userType}, {email, password});
-}
-
-export const FakeSigninForHematologist = (navigation, onDone) => {
-  const email = "hematologist1@yahoo.com";
-  const password = "qwerty123";
-  const isSignup = false;
-  const userType = UserHematologist;
-
-  SigninUser(navigation, onDone, {isSignup, userType}, {email, password});
-}
-
-export const FakeSigninForPatientWithIntro = (navigation, onDone) => {
-  const email = "patient1@yahoo.com";
-  const password = "qwerty123";
-  const isSignup = true;
-  const userType = UserPatient;
-  SigninUser(navigation, onDone, {isSignup, userType}, {email, password});
-}
-
-export const FakeSigninForHematologistWithIntro = (navigation, onDone) => {
-  const email = "hematologist1@yahoo.com";
-  const password = "qwerty123";
-  const isSignup = true;
-  const userType = UserHematologist;
-  SigninUser(navigation, onDone, {isSignup, userType}, {email, password});
-}

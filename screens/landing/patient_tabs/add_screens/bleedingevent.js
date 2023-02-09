@@ -257,7 +257,7 @@ const labels = [
   { id: 2, value: "4 \nHurts little more", src: require("../../../../icons/emoji/3.png") },
   { id: 3, value: "6 \nHurts even more", src: require("../../../../icons/emoji/4.png") },
   { id: 4, value: "8 \nHurts whole lot", src: require("../../../../icons/emoji/5.png") },
-  { id: 5, value: "10 \nHurts worts", src: require("../../../../icons/emoji/6.png") },
+  { id: 5, value: "10 \nHurts worst", src: require("../../../../icons/emoji/6.png") },
 ]
 
 export const DATE_TIME_BLEEDING_EVENT_KEY = '@DATE_TIME_BLEEDING_EVENT_KEY'
