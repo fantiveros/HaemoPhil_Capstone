@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Haemo",
+    "slug": "Haemo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./icons/HaemoPhil_Logo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./icons/HaemoPhil_Logo_spalsh.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./icons/HaemoPhil_Logo_spalsh.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
